@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="/fonts/fonts.css" />
+  </head>
+
+  <!-- Top part of page -->
+  <body>
+    <!-- Header with logo and menu -->
+    <header class="main-header">
+      <div class="logo-small">RYAN SAJULGA</div>
+      <button class="menu-btn" onclick="toggleMenu()">
+        MENU
+        <div class="hamburger-icon-small">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <nav id="mobile-menu" class="mobile-menu">
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="#portfolio" onclick="toggleMenu()">Portfolio</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="profile" class="hero-section">
+      <!-- Left: Text Content -->
+      <div class="hero-text">
+        <p class="hero-greeting">Hey. I'm Ryan</p>
+        <h1 class="hero-title">AN ASPIRING <span class="brand-style">CYBERSECURITY</span> ANALYST</h1>
+        <p class="hero-description">Transforming ideas into secure systems—Cybersecurity analysis and development that protects, secures, and delivers results.</p>
+        <button class="contact-btn" onclick="location.href='./#contact'">
+          CONTACT ME
+          <span class="arrow-icon">→</span>
+        </button>
+      </div>
+
+      <!-- Center: Profile Picture -->
+      <div class="hero-image-container">
+        <img
+          src="./assets/profilePicture.JPG"
+          alt="Ryan Sajulga Profile Pic"
+          class="hero-profile-pic"
+        />
+      </div>
+
+      <!-- Right: Statistics -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">Bachelor's</div>
+          <div class="stat-label">Computer Science Degree</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4+ Years</div>
+          <div class="stat-label">IT Help Desk Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Coursera</div>
+          <div class="stat-label">Google Cybersecurity Professional Certificate</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="skill-card">
+        <h3 class="skill-title">CONSTANTLY LEARNING</h3>
+        <p class="skill-description">Committed to continuous growth regularly learning new tools, techniques, and industry trends to stay sharp and adaptable in cybersecurity.</p>
+      </div>    
+      <div class="skill-card">
+        <h3 class="skill-title">TOOLS AND SKILLS</h3>
+        <p class="skill-description">Basic knowledge of HTML, CSS, JavaScript, Python, and SQL. Currently learning Burp Suite, Portswigger, WireShark, and more.</p>
+      </div>
+      <div class="skill-card">
+        <h3 class="skill-title">CYBERSECURITY EXPERIENCE</h3>
+        <p class="skill-description">Hands on practice with TryHackMe and PortSwigger Labs. Familiar with vulnerability scanning, basic penetration testing, log analysis, and security fundamentals.</p>
+      </div>
+      <div class="skill-card">
+        <h3 class="skill-title">PROFESSIONAL GOALS</h3>
+        <p class="skill-description"> Focused on growing into a Security Analyst or Penetration Tester role. Working towards deeper skills in networking, scripting, web security, and threat analysis.</p>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <div class="about-left">
+          <h2 class="about-title">CRAFTING SECURE SYSTEMS & PROTECTING DIGITAL ASSETS</h2>
+        </div>
+        <div class="about-right">
+          <p class="about-text">
+            Hey, I'm Ryan — an aspiring Cybersecurity Analyst with a growing passion for protecting digital systems and understanding how vulnerabilities are discovered and exploited. I’m currently building a strong foundation in Computer Science and hands-on cybersecurity skills through tools like Burp Suite, Wireshark, and PortSwigger labs.
+          </p>
+          <p class="about-text">
+            I focus on learning how threats work, how attackers think, and how to apply practical security techniques to strengthen systems. My approach combines curiosity, problem-solving, and a commitment to continuous improvement. As I develop my skills, I stay up to date with the latest cybersecurity tools, trends, and best practices to prepare myself for real-world security challenges.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="portfolio-header">
+        <h2 class="portfolio-title">PORTFOLIO</h2>
+        <p class="portfolio-subtitle"> Work and projects that highlight my growing experience in cybersecurity and overall my interests in computer science and what I can create.</p>
+      </div>
+      
+      <div class="portfolio-project">
+        <img
+          src="./assets/reformLogo.png"
+          alt="REFORM Website Project"
+          class="portfolio-image"
+        />
+        <div class="portfolio-info">
+          <h3 class="portfolio-project-title">REFORM</h3>
+          <p class="portfolio-project-desc">Designing website for personal branding</p>
+          <span class="portfolio-tag">Web Development</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+
+    <section id="contact">
+      <h2 class="contact-title">CONTACT</h2>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email Icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:rysajulga@gmail.com">RySajulga@gmail.com</a></p>
+        </div>
+
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn Icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/ryan-sajulga">LinkedIn</a></p>
+        </div>
+
+        <div class="contact-info-container">
+          <img
+            src="./assets/github.png"
+            alt="Github Icon"
+            class="icon contact-icon github-icon"
+          />
+          <p><a href="https://github.com/RySajulga">RySajulga</a></p>
+        </div>
+
+      </div>
+    </section>
+    <footer>
+      
+      <p>Copyright &#169; 2024 Ryan Sajulga. All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
