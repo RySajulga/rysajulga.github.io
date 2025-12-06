@@ -40,13 +40,13 @@ a,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 4rem;
+  padding: 1.25rem 4rem;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: transparent;
+  background-color: #f3f2ee;
 }
 
 .logo-small {

@@ -13,6 +13,79 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    height: fit-content;
+    padding: 6rem 3rem 3rem;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-description {
+    text-align: left;
+  }
+
+  .hero-profile-pic {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-stats {
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+
+  /* SKILLS SECTION */ 
+  .skill-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5 rem;
+    padding: 4rem 3rem;
+  }
+
+  section {
+    padding: 4rem 3rem;
+  }
+
+  /* ABOUT SECTION - reducing the size */
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .portfolio-title {
+    font-size: 2.5rem;
+  }
+
+  .portfolio-image {
+    height: 500px;
+  }
+
+  /* CONTACT SECTION */
+  .contact-title {
+    font-size: 2.5rem;
+  }
+
+  .contact-info-upper-container {
+    gap: 3rem;
+  }
+
+  
   #desktop-nav {
     display: none;
   }
@@ -44,6 +117,119 @@
   }
   .about-containers {
     margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* HEADER - Reduce padding */
+  .main-header {
+    padding: 1.5rem 2rem;         /* Reduces from 2rem 4rem */
+  }
+
+  /* HERO SECTION - Further adjustments */
+  .hero-section {
+    padding: 6rem 2rem 3rem;       /* Further reduces padding */
+    gap: 2rem;                     /* Further reduces gap */
+  }
+
+  .hero-title {
+    font-size: 2rem;               /* Further reduces from 2.5rem */
+  }
+
+  .hero-description {
+    font-size: 0.9rem;             /* Slightly reduces from 1rem */
+  }
+
+  .hero-profile-pic {
+    width: 220px;                  /* Further reduces from 280px */
+    height: 220px;                 /* Further reduces from 280px */
+  }
+
+  .hero-stats {
+    flex-direction: column;         /* Stacks stats vertically */
+    gap: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 1.25rem;            /* Reduces from 1.5rem */
+  }
+
+  /* SKILLS SECTION - Change to 1 column */
+  .skills-section {
+    grid-template-columns: 1fr;    /* Overrides: repeat(2, 1fr) */
+    padding: 3rem 2rem;            /* Further reduces padding */
+  }
+
+  /* GENERAL SECTION PADDING */
+  section {
+    padding: 3rem 2rem;            /* Further reduces from 4rem 3rem */
+  }
+
+  /* ABOUT SECTION - Stack to 1 column */
+  .about-section {
+    padding: 3rem 2rem;            /* Specific override */
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;    /* Overrides: 1fr 1fr */
+    gap: 2rem;                     /* Reduces from 4rem */
+  }
+
+  .about-title {
+    font-size: 2rem;               /* Further reduces from 2.5rem */
+  }
+
+  .about-text {
+    font-size: 0.95rem;            /* Slightly reduces from 1rem */
+  }
+
+  /* PORTFOLIO SECTION - Stack header */
+  .portfolio-section {
+    padding: 3rem 2rem;            /* Specific override */
+  }
+
+  .portfolio-header {
+    grid-template-columns: 1fr;    /* Overrides: 1fr 1fr */
+    gap: 1.5rem;                   /* Reduces from 4rem */
+    margin-bottom: 3rem;           /* Reduces from 4rem */
+  }
+
+  .portfolio-title {
+    font-size: 2rem;               /* Further reduces from 2.5rem */
+  }
+
+  .portfolio-image {
+    height: 300px;                 /* Further reduces from 500px */
+    padding: 2rem;                 /* Reduces from 3rem */
+  }
+
+  .portfolio-info {
+    grid-template-columns: 1fr;    /* Overrides: auto 1fr auto */
+    gap: 1rem;                     /* Reduces from 2rem */
+  }
+
+  .portfolio-project-title {
+    font-size: 1.5rem;             /* Reduces from 2rem */
+  }
+
+  /* CONTACT SECTION - Stack items */
+  #contact {
+    padding: 3rem 2rem;            /* Specific override */
+  }
+
+  .contact-title {
+    font-size: 2rem;               /* Further reduces from 2.5rem */
+  }
+
+  .contact-info-upper-container {
+    flex-direction: column;        /* Stacks vertically */
+    gap: 2rem;                     /* Reduces from 3rem */
+    align-items: center;           /* Centers items */
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 2rem 2rem;            /* Reduces from 3rem 4rem */
   }
 }
 
