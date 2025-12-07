@@ -133,7 +133,7 @@
     align-items: start;
     padding: 6rem 2rem 5rem;  /* Increased bottom padding, use !important to override section rule */
     gap: 1.5rem;
-    text-align: left;
+    text-align: center;
     min-height: auto;
     margin-bottom: 0;
   }
@@ -173,13 +173,19 @@
 
   .hero-stats {
     grid-column: 1 / -1;
-    flex-direction: column;
+    display: grid;  /* Change from flex to grid */
+    grid-template-columns: repeat(2, 1fr);  /* 2 columns */
     gap: 1.5rem;
     margin-top: 2rem;
-    margin-bottom: 0;  
+    margin-bottom: 0;
     padding-bottom: 0;
+    align-items: start; 
   }
 
+  .stat-item {
+    text-align: center;  /* Or center, depending on your preference */
+  }
+  
   .stat-number {
     font-size: 1.25rem;            /* Reduces from 1.5rem */
   }
