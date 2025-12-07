@@ -252,6 +252,16 @@ section {
 .skill-card:hover {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   transform: translateY(-5px);
+  background-color: #3c4341;
+}
+
+/* Text color changes when the card is hovered */
+.skill-card:hover .skill-description {
+  color: #EDEBE7;
+}
+
+.skill-card:hover .skill-title {
+  color: #BEBEBE;
 }
 
 .skill-title {

@@ -27,32 +27,22 @@ function scrollToContact() {
 
 // Scroll Animation Observer
 const observerOptions = {
-    threshold: 0.1,  // Trigger when 10% of element is visible
-    rootMargin: '0px 0px -50px 0px'  // Trigger slightly before element enters viewport
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            // Element enters viewport -> show animation
             entry.target.classList.add('scroll-visible');
-            // Optional: Stop observing after animation to improve performance
-            // observer.unobserve(entry.target);
+        } else {
+            // Element leaves viewport -> reset animation
+            entry.target.classList.remove('scroll-visible');
         }
     });
 }, observerOptions);
 
-// Observe all elements with scroll animation classes when page loads
-document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll(
-        '.scroll-hidden, .scroll-fade-left, .scroll-fade-right, .scroll-scale'
-    );
-    
-    animatedElements.forEach(element => {
-        observer.observe(element);
-    });
-});
-
-// Observe all elements with scroll animation classes when page loads
 document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll(
         '.scroll-hidden, .scroll-fade-left, .scroll-fade-right, .scroll-scale'
