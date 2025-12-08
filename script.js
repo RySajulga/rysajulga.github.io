@@ -52,3 +52,62 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(element);
     });
 });
+
+
+// Section Indicator
+const sectionIndicator = document.getElementById('section-indicator');
+const sections = [
+    { id: 'profile', name: 'Home' },
+    { id: 'skills', name: 'Skills' },
+    { id: 'about', name: 'About' },
+    { id: 'portfolio', name: 'Portfolio' },
+    { id: 'contact', name: 'Contact' }
+];
+
+const sectionObserverOptions = {
+    threshold: 0.3,
+    rootMargin: '-100px 0px -50% 0px'
+};
+
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const sectionId = entry.target.id;
+            const section = sections.find(s => s.id === sectionId);
+            if (section && sectionIndicator) {
+                sectionIndicator.textContent = section.name;
+                sectionIndicator.classList.add('active');
+            }
+        }
+    });
+}, sectionObserverOptions);
+
+// Observe all sections
+sections.forEach(section => {
+    const element = document.getElementById(section.id);
+    if (element) {
+        sectionObserver.observe(element);
+    }
+});
+
+// Set initial section on page load
+window.addEventListener('load', () => {
+    const scrollPosition = window.scrollY + 150;
+    let currentSection = sections[0];
+    
+    sections.forEach(section => {
+        const element = document.getElementById(section.id);
+        if (element) {
+            const rect = element.getBoundingClientRect();
+            const elementTop = rect.top + window.scrollY;
+            if (scrollPosition >= elementTop) {
+                currentSection = section;
+            }
+        }
+    });
+    
+    if (sectionIndicator) {
+        sectionIndicator.textContent = currentSection.name;
+        sectionIndicator.classList.add('active');
+    }
+});
