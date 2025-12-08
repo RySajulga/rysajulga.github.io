@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ryan Sajulga Website</title>
+    <title>Ryan Sajulga Personal Website</title>
     <link rel="icon" type="image/x-icon" href="/assets/websiteLogo.png">
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
@@ -16,7 +16,7 @@
   <!-- Top part of page -->
   <body>
     <!-- Header with logo and menu -->
-    <header class="main-header">
+    <header class="main-header scroll-hidden" >
       <div class="logo-small">RYAN SAJULGA</div>
       <button class="menu-btn" onclick="toggleMenu()">
         MENU
@@ -29,7 +29,7 @@
     </header>
 
     <!-- Mobile Menu -->
-    <nav id="mobile-menu" class="mobile-menu">
+    <nav id="mobile-menu" class="mobile-menu scroll-hidden">
       <div class="menu-links">
         <li><a href="#about" onclick="toggleMenu()">About</a></li>
         <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
@@ -42,17 +42,17 @@
     <section id="profile" class="hero-section">
       <!-- Left: Text Content -->
       <div class="hero-text">
-        <p class="hero-greeting">Hey. I'm Ryan</p>
-        <h1 class="hero-title">AN ASPIRING <span class="brand-style">CYBERSECURITY</span> ANALYST</h1>
-        <p class="hero-description">Strengthening digital environments through proactive threat analysis, secure system design, and hands-on IT troubleshooting to keep users and data safe.</p>
-        <button class="contact-btn" onclick="location.href='./#contact'">
+        <p class="hero-greeting scroll-fade-left scroll-delay-1">Hey. I'm Ryan</p>
+        <h1 class="hero-title scroll-fade-left scroll-delay-2">AN ASPIRING <span class="brand-style scroll-fade-left scroll-delay-2">CYBERSECURITY</span> ANALYST</h1>
+        <p class="hero-description scroll-fade-left scroll-delay-3">Strengthening digital environments through proactive threat analysis, secure system design, and hands-on IT troubleshooting to keep users and data safe.</p>
+        <button class="contact-btn scroll-hidden scroll-delay-4" data-hover="please?" onclick="location.href='./#contact'">
           CONTACT ME
           <span class="arrow-icon">→</span>
         </button>
       </div>
 
       <!-- Center: Profile Picture -->
-      <div class="hero-image-container">
+      <div class="hero-image-container scroll-hidden scroll-delay-1" >
         <img
           src="./assets/profilePicture.JPG"
           alt="Ryan Sajulga Profile Pic"
@@ -62,19 +62,19 @@
 
       <!-- Right: Statistics -->
       <div class="hero-stats">
-        <div class="stat-item">
+        <div class="stat-item scroll-fade-right scroll-delay-1">
           <div class="stat-number">Bachelor's</div>
           <div class="stat-label">Computer Science Degree</div>
         </div>
-        <div class="stat-item">
+        <div class="stat-item scroll-fade-right scroll-delay-2">
           <div class="stat-number">4+ Years</div>
           <div class="stat-label">IT Help Desk Experience</div>
         </div>
-        <div class="stat-item">
+        <div class="stat-item scroll-fade-right scroll-delay-3">
           <div class="stat-number">Coursera</div>
           <div class="stat-label">Google Cybersecurity Professional Certificate</div>
         </div>
-        <div class="stat-item">
+        <div class="stat-item scroll-fade-right scroll-delay-4">
           <div class="stat-number">Always Learning</div>
           <div class="stat-label">Ongoing Cybersecurity Training & Skills Development</div>
         </div>
@@ -125,26 +125,27 @@
         <h2 class="portfolio-title">PORTFOLIO</h2>
         <p class="portfolio-subtitle"> Work and projects that highlight my growing experience in cybersecurity and overall my interests in computer science and what I can create.</p>
       </div>
-      <div class="portfolio-project scroll-scale">
-        <img
+      <a href="https://www.linkedin.com/in/ryan-sajulga"> 
+        <img 
           src="./assets/reformLogo.png"
           alt="REFORM Website Project"
-          class="portfolio-image"
+          class="portfolio-image scroll-hidden"
         />
         <div class="portfolio-info">
-          <h3 class="portfolio-project-title">REFORM</h3>
-          <p class="portfolio-project-desc">Designing website for personal branding</p>
-          <span class="portfolio-tag">Web Development</span>
+          <h3 class="portfolio-project-title scroll-fade-left">REFORM</h3>
+          <p class="portfolio-project-desc scroll-fade-left">Designing website for personal branding</p>
+          <span class="portfolio-tag scroll-fade-right">Web Development</span>
         </div>
+      </a>
       </div>
     </section>
 
     <!-- Contact Section -->
 
     <section id="contact">
-      <h2 class="contact-title">CONTACT</h2>
+      <h2 class="contact-title scroll-hidden">CONTACT</h2>
       <div class="contact-info-upper-container">
-        <div class="contact-info-container">
+        <div class="contact-info-container scroll-hidden scroll-delay-1">
           <img
             src="./assets/email.png"
             alt="Email Icon"
@@ -153,7 +154,7 @@
           <p><a href="mailto:rysajulga@gmail.com">RySajulga@gmail.com</a></p>
         </div>
 
-        <div class="contact-info-container">
+        <div class="contact-info-container scroll-hidden scroll-delay-2">
           <img
             src="./assets/linkedin.png"
             alt="LinkedIn Icon"
@@ -162,7 +163,7 @@
           <p><a href="https://www.linkedin.com/in/ryan-sajulga">LinkedIn</a></p>
         </div>
 
-        <div class="contact-info-container">
+        <div class="contact-info-container scroll-hidden scroll-delay-3">
           <img
             src="./assets/github.png"
             alt="Github Icon"
